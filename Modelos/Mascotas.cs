@@ -4,8 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 
 //Para espacios de otras clases
-using PruebaConexion.Modelos.Duenhos;
-using PruebaConexion.Modelos.Veterinarios;
+using PruebaConexion.Modelos;
+
 public class Mascotas
 {
     [Key]public int Id { get; set; }
