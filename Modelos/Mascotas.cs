@@ -1,3 +1,5 @@
+using PruebaConexion.Modelos.Duenhos;
+using PruebaConexion.Modelos.Veterinarios;
 public class Mascotas
 {
     public string? Nombre { get; set; }

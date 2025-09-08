@@ -49,3 +49,4 @@ VALUES
 ('Luna', '1', 'Siames', 4, 4),
 ('Max', '4', 'Pug', 5, 5);
 
+use Veterinarias;
