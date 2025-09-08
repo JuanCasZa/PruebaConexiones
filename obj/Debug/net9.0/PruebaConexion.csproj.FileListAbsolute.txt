@@ -1,0 +1,5 @@
+C:\Users\USUARIO\Desktop\PruebaConexion\obj\Debug\net9.0\PruebaConexion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\Desktop\PruebaConexion\obj\Debug\net9.0\PruebaConexion.AssemblyInfoInputs.cache
+C:\Users\USUARIO\Desktop\PruebaConexion\obj\Debug\net9.0\PruebaConexion.AssemblyInfo.cs
+C:\Users\USUARIO\Desktop\PruebaConexion\obj\Debug\net9.0\PruebaConexion.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\PruebaConexion\obj\Debug\net9.0\PruebaConexion.sourcelink.json

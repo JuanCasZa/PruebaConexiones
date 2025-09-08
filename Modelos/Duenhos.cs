@@ -1,7 +1,9 @@
-public class Duenhos
+namespace PruebaConexion.Modelos.Duenhos
 {
-    public string? Nombre { get; set; }
-    public int? Edad { get; set; }
-    public string? Identificacion { get; set; }
-
+    public class Duenhos
+    {
+        public string? Nombre { get; set; }
+        public int? Edad { get; set; }
+        public string? Identificacion { get; set; }
+    }    
 }
