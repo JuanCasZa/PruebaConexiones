@@ -1,7 +1,14 @@
+//Para conexion BD
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+
+//Para espacios de otras clases
 using PruebaConexion.Modelos.Duenhos;
 using PruebaConexion.Modelos.Veterinarios;
 public class Mascotas
 {
+    [Key]public int Id { get; set; }
     public string? Nombre { get; set; }
     public int? Edad { get; set; }
     public string Raza { get; set; }
@@ -12,6 +19,6 @@ public class Mascotas
     public int Veterinario { get; set; }
 
     //Para traer los objetos
-    public Duenhos _Duenho { get; set; }
-    public Veterinarios _Veterinario { get; set; }
+    [ForeignKey("Duenho")]public Duenhos? _Duenho { get; set; }
+    [ForeignKey("Veterinario")]public Veterinarios? _Veterinario { get; set; }
 }
