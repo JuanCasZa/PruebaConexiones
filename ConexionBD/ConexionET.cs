@@ -2,6 +2,7 @@ using System.Data.SqlClient;
 using System.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
+using PruebaConexion.Modelos;
 
 namespace PruebaConexion.ConexioBD
 {
@@ -9,15 +10,15 @@ namespace PruebaConexion.ConexioBD
     {
         private string cadenaConexion = "server=DESKTOP-PGQLEH1\\SQLEXPRESS;database=Veterinarias;Integrated Security=True;TrustServerCertificate=true";
 
-        public void CargarMascotas()
+        public void CargarDuenhos()
         {
             var conexion = new Conexion();
             conexion.CadenaConexion = cadenaConexion;
 
-            var lista = conexion.Mascotas.ToList();
-            foreach (var mascotas in lista)
+            var lista = conexion.Duenhos!.ToList();
+            foreach (var duenhos in lista)
             {
-                Console.WriteLine(mascotas.Id + " " + mascotas.Nombre);
+                Console.WriteLine(duenhos.Id + " " + duenhos.Nombre);
             }
         }
     }
@@ -32,6 +33,7 @@ namespace PruebaConexion.ConexioBD
             optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
         }
 
-        public DbSet<Mascotas>? Mascotas { get; set; }
+        //public DbSet<Mascotas>? Mascotas { get; set; }
+        public DbSet<Duenhos>? Duenhos { get; set; }
     }
 }

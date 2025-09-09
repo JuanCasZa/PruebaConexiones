@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PruebaConexion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77a7b184801ca2aa64a1349bb1f6e21b8629a2cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+500d9dc705419d3dd6d63ebb626a5065f187a521")]
 [assembly: System.Reflection.AssemblyProductAttribute("PruebaConexion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PruebaConexion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
