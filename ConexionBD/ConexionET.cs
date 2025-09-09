@@ -1,3 +1,4 @@
+/*
 using System.Data.SqlClient;
 using System.Data;
 using Microsoft.EntityFrameworkCore;
@@ -35,3 +36,44 @@ namespace PruebaConexion.ConexioBD
         public DbSet<Mascotas>? Mascotas { get; set; }
     }
 }
+*/
+using System.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+
+namespace PruebaConexion.ConexionBD
+{
+    public class ConexionET
+    {
+        private string cadenaConexion = 
+            "server=DESKTOP-PGQLEH1\\SQLEXPRESS;database=Veterinarias;Integrated Security=True;TrustServerCertificate=true";
+
+        public void CargarMascotas()
+        {
+            using var conexion = new Conexion { CadenaConexion = cadenaConexion };
+
+            var lista = conexion.Mascotas!.ToList();
+            foreach (var mascota in lista)
+            {
+                Console.WriteLine($"{mascota.Id} {mascota.Nombre}");
+            }
+        }
+    }
+
+    public class Conexion : DbContext
+    {
+        public string? CadenaConexion { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured && !string.IsNullOrEmpty(CadenaConexion))
+            {
+                optionsBuilder.UseSqlServer(CadenaConexion);
+            }
+
+            optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+        }
+
+        public DbSet<Mascota>? Mascotas { get; set; }
+    }
+}
+
