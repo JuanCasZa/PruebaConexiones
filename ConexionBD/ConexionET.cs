@@ -7,7 +7,7 @@ namespace PruebaConexion.ConexioBD
 {
     public class ConexionET
     {
-        private string cadenaConexion = "server=DESKTOP-PGQLEH1/SQLEXPRESS;database=Veterinarias;Integrated Security=True;TrustServerCertificate=true";
+        private string cadenaConexion = "server=DESKTOP-PGQLEH1\\SQLEXPRESS;database=Veterinarias;Integrated Security=True;TrustServerCertificate=true";
 
         public void CargarMascotas()
         {

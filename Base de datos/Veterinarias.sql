@@ -17,6 +17,7 @@ CREATE TABLE [Mascotas] (
 	[Nombre] NVARCHAR(50) NOT NULL,
 	[Edad] NVARCHAR(50) NOT NULL,
 	[Raza] NVARCHAR(8) NOT NULL,
+	[Peso] DECIMAL,
 	[Duenho] int references [Duenhos]([Id]),
 	[Veterinario] int references [Veterinarios]([Id])
 );
