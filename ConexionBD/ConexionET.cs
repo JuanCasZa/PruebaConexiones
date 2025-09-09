@@ -39,6 +39,7 @@ namespace PruebaConexion.ConexioBD
 */
 using System.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using PruebaConexion.Modelos;
 
 namespace PruebaConexion.ConexionBD
 {
