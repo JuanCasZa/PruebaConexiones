@@ -1,4 +1,5 @@
 //Para conexion BD
+/*
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -21,4 +22,37 @@ public class Mascotas
     //Para traer los objetos
     [ForeignKey("Duenho")]public Duenhos? _Duenho { get; set; }
     [ForeignKey("Veterinario")]public Veterinarios? _Veterinario { get; set; }
+}
+*/
+
+//Para BD
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+//Para espacios de otras clases
+using PruebaConexion.Modelos;
+
+namespace PruebaConexion.Modelos
+{
+    public class Mascota
+    {
+        [Key] 
+        public int Id { get; set; }
+
+        public string? Nombre { get; set; }
+        public int? Edad { get; set; }
+        public string? Raza { get; set; }
+        public decimal Peso { get; set; }
+
+        // Claves foráneas (con convención: NombreClaseId)
+        public int DuenhoId { get; set; }
+        public int VeterinarioId { get; set; }
+
+        // Propiedades de navegación
+        [ForeignKey("DuenhoId")] 
+        public Duenhos? Duenho { get; set; }
+
+        [ForeignKey("VeterinarioId")] 
+        public Veterinarios? Veterinario { get; set; }
+    }
 }
