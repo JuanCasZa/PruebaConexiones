@@ -29,9 +29,6 @@ public class Mascotas
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-//Para espacios de otras clases
-using PruebaConexion.Modelos;
-
 namespace PruebaConexion.Modelos
 {
     public class Mascota
@@ -39,20 +36,20 @@ namespace PruebaConexion.Modelos
         [Key] 
         public int Id { get; set; }
 
-        public string? Nombre { get; set; }
-        public int? Edad { get; set; }
-        public string? Raza { get; set; }
+        public string Nombre { get; set; } = string.Empty;
+        public int Edad { get; set; }
+        public string Raza { get; set; } = string.Empty;
         public decimal Peso { get; set; }
 
-        // Claves foráneas (con convención: NombreClaseId)
+        // Claves foráneas
         public int DuenhoId { get; set; }
         public int VeterinarioId { get; set; }
 
         // Propiedades de navegación
         [ForeignKey("DuenhoId")] 
-        public Duenhos? Duenho { get; set; }
+        public Duenho? Duenho { get; set; }
 
         [ForeignKey("VeterinarioId")] 
-        public Veterinarios? Veterinario { get; set; }
+        public Veterinario? Veterinario { get; set; }
     }
 }

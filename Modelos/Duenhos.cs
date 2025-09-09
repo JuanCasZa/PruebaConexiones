@@ -26,12 +26,11 @@ namespace PruebaConexion.Modelos
         [Key]
         public int Id { get; set; }
 
-        public string? Nombre { get; set; }
+        public string Nombre { get; set; } = string.Empty;
         public int Edad { get; set; }
-        public string? Identificacion { get; set; }
+        public string Identificacion { get; set; } = string.Empty;
 
         // Relación uno-a-muchos: un dueño puede tener varias mascotas
-        public ICollection<Mascota>? Mascotas { get; set; }
+        public ICollection<Mascota> Mascotas { get; set; } = new List<Mascota>();
     }
 }
-

@@ -37,7 +37,6 @@ namespace PruebaConexion.ConexioBD
     }
 }
 */
-using System.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using PruebaConexion.Modelos;
 
@@ -45,8 +44,8 @@ namespace PruebaConexion.ConexionBD
 {
     public class ConexionET
     {
-        private string cadenaConexion = 
-            "server=DESKTOP-PGQLEH1\\SQLEXPRESS;database=Veterinarias;Integrated Security=True;TrustServerCertificate=true";
+        private readonly string cadenaConexion = 
+            "server=DESKTOP-7PQ607U\\SQLEXPRESS;database=Veterinarias;Integrated Security=True;TrustServerCertificate=true";
 
         public void CargarMascotas()
         {
@@ -75,6 +74,9 @@ namespace PruebaConexion.ConexionBD
         }
 
         public DbSet<Mascota>? Mascotas { get; set; }
+        public DbSet<Duenho>? Duenhos { get; set; }
+        public DbSet<Veterinario>? Veterinarios { get; set; }
     }
 }
+
 
