@@ -8,7 +8,7 @@ namespace PruebaConexion.Modelos
     {
         [Key]public int Id { get; set; }
         public string? Nombre { get; set; }
-        public int? AnhosExperiencia { get; set; }
+        public string? AnhosExperiencia { get; set; }
         public string? Turno { get; set; }
     }    
 }

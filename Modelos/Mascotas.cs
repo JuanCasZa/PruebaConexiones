@@ -10,9 +10,9 @@ public class Mascotas
 {
     [Key]public int Id { get; set; }
     public string? Nombre { get; set; }
-    public int? Edad { get; set; }
+    public string Edad { get; set; }
     public string? Raza { get; set; }
-    public decimal Peso { get; set; }
+    //public decimal Peso { get; set; }
 
     //Como referencias a los objetos
     public int Duenho { get; set; }
